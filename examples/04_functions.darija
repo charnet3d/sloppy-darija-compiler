@@ -1,0 +1,54 @@
+// Example 4: Functions in Darija
+// Demonstrates function declaration, parameters, return values, and recursion
+
+module functions_demo {
+    import io from "standard/io";
+    import math from "standard/math";
+    
+    // Function with parameters and return value
+    دالة add(a: int, b: int): int:
+        رجع a + b;
+    
+    // Function with multiple parameters
+    دالة greet(name: string, greeting: string): string:
+        رجع greeting + " " + name + "!";
+    
+    // Function without return value
+    دالة printLine(): void:
+        اطبع "------------------------";
+    
+    // Recursive function - factorial
+    دالة factorial(n: int): int:
+        إلا (n <= 1):
+            رجع 1;
+        غير:
+            رجع n * factorial(n - 1);
+    
+    // Function with default parameters
+    دالة power(base: int, exp: int = 2): int:
+        اعرف result: int = 1;
+        عاود (اعرف i: int = 1; i <= exp; i++):
+            result = result * base;
+        رجع result;
+    
+    الرئيسية:
+        // Call add function
+        اعرف sum: int = add(5, 3);
+        اطبع "5 + 3 = " + sum;
+        
+        // Call greet function
+        اطبع greet("Ahmed", "Salam");
+        
+        // Call printLine function
+        printLine();
+        
+        // Call factorial function
+        اعرف fact: int = factorial(5);
+        اطبع "5! = " + fact;
+        
+        // Call power function with default exponent
+        اطبع "4^2 = " + power(4);
+        
+        // Call power function with custom exponent
+        اطبع "2^10 = " + power(2, 10);
+}

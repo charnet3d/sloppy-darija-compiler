@@ -1,0 +1,95 @@
+// Example 5: Classes and Objects in Darija
+// Demonstrates OOP concepts: classes, inheritance, constructors, methods
+
+module classes_demo {
+    import io from "standard/io";
+    
+    // Base class
+    صنف Animal {
+        public string name;
+        public int age;
+        
+        // Constructor
+        دالة constructor(n: string, a: int): void:
+            this.name = n;
+            this.age = a;
+        
+        // Method
+        public دالة makeSound(): string:
+            رجع "Some sound";
+        
+        public دالة describe(): string:
+            رجع "Animal named " + this.name + " is " + this.age + " years old";
+    }
+    
+    // Derived class - extends Animal
+    صنف Dog extends Animal {
+        public string breed;
+        
+        دالة constructor(n: string, a: int, b: string): void:
+            super(n, a);
+            this.breed = b;
+        }
+        
+        // Override method
+        public دالة makeSound(): string:
+            رجع "Woof! Woof!";
+        
+        public دالة fetch(): void:
+            اطبع this.name + " is fetching the ball!";
+    }
+    
+    // Another derived class
+    صنف Cat extends Animal {
+        public int lives;
+        
+        دالة constructor(n: string, a: int): void:
+            super(n, a);
+            this.lives = 9;
+        }
+        
+        public دالة makeSound(): string:
+            رجع "Meow!";
+        
+        public دالة scratch(): void:
+            اطبع this.name + " is scratching the furniture!";
+    }
+    
+    // A utility class with static methods
+    صنف MathUtils {
+        public static دالة square(x: int): int:
+            رجع x * x;
+        
+        public static دالة cube(x: int): int:
+            رجع x * x * x;
+        
+        public static دالة absolute(x: int): int:
+            إلا (x < 0):
+                رجع -x;
+            غير:
+                رجع x;
+        }
+    }
+    
+    الرئيسية:
+        // Create objects
+        اعرف dog: Dog = new Dog("Buddy", 3, "Golden Retriever");
+        اعرف cat: Cat = new Cat("Whiskers", 5);
+        
+        // Access fields and call methods
+        اطبع dog.describe();
+        اطبع "Sound: " + dog.makeSound();
+        dog.fetch();
+        
+        اطبع "\n";
+        اطبع cat.describe();
+        اطبع "Sound: " + cat.makeSound();
+        cat.scratch();
+        
+        // Use static methods
+        اطبع "\nMathUtils demo:";
+        اطبع "Square of 5: " + MathUtils.square(5);
+        اطبع "Cube of 3: " + MathUtils.cube(3);
+        اطبع "Absolute of -10: " + MathUtils.absolute(-10);
+    }
+}

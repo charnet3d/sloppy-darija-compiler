@@ -1,0 +1,44 @@
+// Example 2: Variables and Types in Darija
+// Demonstrates variable declaration, type system, and basic operations
+
+module variables_demo {
+    import io from "standard/io";
+    
+    الرئيسية:
+        // Integer variables
+        اعرف عدد: int = 42;
+        اعرف عدد: int = 100;
+        
+        // Float variables
+        اعرف عدد: float = 3.14159;
+        اعرف عدد: double = 2.718281828;
+        
+        // Boolean variables
+        اعرف عدد: bool = صحيح;
+        اعرف عدد: bool = غلط;
+        
+        // Character variable
+        اعرف عدد: char = 'A';
+        
+        // String variable
+        اعرف عدد: string = "مرحبا";
+        
+        // Constant variable
+        ثابت PI: float = 3.14159;
+        
+        // Print all variables
+        اطبع "Integer: " + عدد;
+        اطبع "Float: " + الفلوت;
+        اطبع "Boolean: " + البوليان;
+        اطبع "Character: " + الكاراكتر;
+        اطبع "String: " + السترينج;
+        اطبع "PI: " + PI;
+        
+        // Basic arithmetic
+        اعرف result: int = عدد + عدد2;
+        اطبع "Sum: " + result;
+        
+        // Type casting
+        اعرف casted: int = (int) الفلوت;
+        اطبع "Casted: " + casted;
+}

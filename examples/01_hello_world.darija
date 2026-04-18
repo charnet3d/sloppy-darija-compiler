@@ -1,0 +1,15 @@
+// Example 1: Hello World in Darija
+// This is the simplest program demonstrating the basic structure
+
+وحدة hello_world {
+    // Import the standard I/O library
+    استورد io من "standard/io";
+    
+    // Main function - entry point of the program
+    الرئيسية:
+        // Print "Hello, World!" to the console
+        اطبع "مرحبا بالعالم!";
+        
+        // Print "Hello, World!" in Latin script
+        اطبع "Hello, World!";
+}

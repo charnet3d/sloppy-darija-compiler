@@ -1,0 +1,52 @@
+// Example 3: Control Flow in Darija
+// Demonstrates if-else, for loops, while loops, and switch statements
+
+module control_flow_demo {
+    import io from "standard/io";
+    
+    الرئيسية:
+        // If-else statement
+        اعرف x: int = 10;
+        
+        إلا (x > 0):
+            اطبع "x is positive";
+        إلا إذا (x == 0):
+            اطبع "x is zero";
+        غير:
+            اطبع "x is negative";
+        
+        // For loop - count from 1 to 5
+        اطبع "\nCounting from 1 to 5:";
+        عاود (اعرف i: int = 1; i <= 5; i++):
+            اطبع i;
+        
+        // For-each loop
+        اعرف numbers: array = [1, 2, 3, 4, 5];
+        اطبع "\nFor-each loop:";
+        عاود لكل num في numbers:
+            اطبع num * 2;
+        
+        // While loop
+        اعرف counter: int = 5;
+        اطبع "\nWhile loop countdown:";
+        ما دام (counter > 0):
+            اطبع counter;
+            counter--;
+        
+        // Do-while loop
+        اعرف n: int = 0;
+        اطبع "\nDo-while loop:";
+        دير:
+            n++;
+            اطبع n;
+        ما دام (n < 3);
+        
+        // Break and continue
+        اطبع "\nBreak and continue demo:";
+        عاود (اعرف j: int = 1; j <= 10; j++):
+            إلا (j == 5):
+                continue;
+            إلا إذا (j == 8):
+                break;
+            اطبع j;
+}
